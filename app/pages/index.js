@@ -138,7 +138,7 @@ function App() {
     return (
         <div className='App'>
             <div>
-                <h2 className="header" >Daoist's Note DApp</h2>
+                <h2 className="header" >Daoist&apos;s Note DApp</h2>
 
                 {!walletAddress ? (
                     <div>
