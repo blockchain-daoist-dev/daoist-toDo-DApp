@@ -138,7 +138,7 @@ function App() {
     return (
         <div className='App'>
             <div>
-                <h2 className="header" >Daoist Storage DApp</h2>
+                <h2 className="header" >Daoist's Note DApp</h2>
 
                 {!walletAddress ? (
                     <div>
@@ -162,7 +162,7 @@ function App() {
                                 ></input>
                                 <br></br>
                                 <button className="btn2" onClick={UpdateValue} >
-                                    Store
+                                    Save
                                 </button>
                             </div>
                             {/* set value column two*/}
