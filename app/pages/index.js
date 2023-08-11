@@ -121,13 +121,15 @@ function App() {
         try {
             const provider = getProvider();
             const program = new anchor.Program(idl, programID, provider);
-            const value = new anchor.BN(inputValue);
+            const value = inputValue;
 
             let tx2 = await program.rpc.updateValue(value, {
                 accounts: {
                     storageAccount: myAccount.publicKey,
                 },
-            })
+                
+            }) 
+            console.log('Message stored sucessfully! tx:', tx2)
         } catch (error) {
             console.log('error in tx2!:', error);
         }
@@ -154,7 +156,7 @@ function App() {
                             {/* set value column one */}
                             <div className="grid-item">
                                 <input
-                                    placeholder="value"
+                                    placeholder="Type here..."
                                     value={inputValue}
                                     onChange={onInputChange}
                                 ></input>
